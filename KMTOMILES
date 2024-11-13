@@ -8,7 +8,6 @@ def convert_miles_to_km():
     except ValueError:
         result_label.config(text="Voer een geldig getal in.")
 
-# Tkinter setup
 root = Tk()
 root.title("Miles to Kilometers Converter")
 
@@ -17,10 +16,11 @@ Label(root, text="Mijlen:").pack()
 miles_entry = Entry(root)
 miles_entry.pack()
 
-# Resultaat label en knop
+# Resultaat label
 result_label = Label(root, text="")
 result_label.pack(pady=10)
 
+# Knop
 Button(root, text="Converteer naar km", command=convert_miles_to_km).pack()
 
 root.mainloop()
