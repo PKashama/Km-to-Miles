@@ -1,0 +1,26 @@
+from tkinter import *
+
+def convert_miles_to_km():
+    try:
+        miles = float(miles_entry.get())
+        km = miles * 1.60934
+        result_label.config(text=f"{miles} mijlen is gelijk aan {km:.2f} kilometer")
+    except ValueError:
+        result_label.config(text="Voer een geldig getal in.")
+
+# Tkinter setup
+root = Tk()
+root.title("Miles to Kilometers Converter")
+
+# Invoer voor mijlen
+Label(root, text="Mijlen:").pack()
+miles_entry = Entry(root)
+miles_entry.pack()
+
+# Resultaat label en knop
+result_label = Label(root, text="")
+result_label.pack(pady=10)
+
+Button(root, text="Converteer naar km", command=convert_miles_to_km).pack()
+
+root.mainloop()
