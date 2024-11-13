@@ -18,9 +18,9 @@ miles_entry.pack()
 
 # Resultaat label
 result_label = Label(root, text="")
-result_label.pack(pady=10)
+result_label.pack(padx=90, pady=10)
 
-# Knop
+# Knop maken
 Button(root, text="Converteer naar km", command=convert_miles_to_km).pack()
 
 root.mainloop()
